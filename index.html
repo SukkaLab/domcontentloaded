@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+  <title>DOMContentLoaded Event - SukkaLab</title>
+</head>
+
+<body>
+  <pre>
+    <code>// Open the console and take a look!
+console.log(document.readyState);
+
+window.addEventListener('load', () => {
+  console.log('window load event');
+
+  document.addEventListener('DOMContentLoaded', () => { console.log('DOMContentLoaded is now triggered'); });
+});</code>
+  </pre>
+  <script>
+    console.log(document.readyState);
+
+    window.addEventListener('load', () => {
+      console.log('window load event');
+
+      document.addEventListener('DOMContentLoaded', () => { console.log('DOMContentLoaded is now triggered'); });
+    });
+  </script>
+</body>
+
+</html>
