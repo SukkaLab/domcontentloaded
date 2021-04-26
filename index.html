@@ -8,7 +8,9 @@
   <pre>
     <code>// Open the console and take a look!
 console.log(document.readyState);
-
+document.addEventListener('readystatechange', event => {
+  console.log('readystatechange:', event.target.readyState);
+});
 window.addEventListener('load', () => {
   console.log('window load event');
 
@@ -17,7 +19,9 @@ window.addEventListener('load', () => {
   </pre>
   <script>
     console.log(document.readyState);
-
+    document.addEventListener('readystatechange', event => {
+      console.log('readystatechange:', event.target.readyState);
+    });
     window.addEventListener('load', () => {
       console.log('window load event');
 
